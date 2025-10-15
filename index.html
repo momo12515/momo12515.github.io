@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Evolution: Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Code Comment: Linking to the single external stylesheet for consistent design across all pages. -->
+</head>
+<body>
+
+    <header id="main-header">
+        <h1>The Hypertext Transfer Protocol: A Comprehensive Analysis</h1>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="http1.html">HTTP/1.x: Simplicity & The Flaw</a></li>
+                <li><a href="http2-3.html">HTTP/2 & HTTP/3: Performance</a></li>
+                <li><a href="concepts.html">Key Concepts</a></li>
+                <li><a href="references.html">References & Resources</a></li>
+                <li><a href="about.html">About This Project</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <h2>Introduction & Abstract</h2>
+            
+            <p>This website presents a comprehensive and in-depth analysis of the Hypertext Transfer Protocol (HTTP), the foundational application-layer protocol of the World Wide Web. We trace HTTP's evolution through its major versions, examining the architectural and performance challenges that drove its development—from the rudimentary origins of HTTP/0.9 to the modern, UDP-based QUIC protocol in HTTP/3.</p>
+            
+            <p>The core of HTTP's function is the regulated transaction of information, operating on the fundamental client-server concept. A client (browser) sends a request, and a server returns a response. Although its central role is to accelerate browser-server communication, HTTP's simple yet powerful design allows it to be used for many other purposes, such as accessing APIs and facilitating machine-to-machine communication.</p>
+            
+            <div class="content-card">
+                <h3>Key Terms</h3>
+                <!-- Code Comment: Using an unordered list for presenting key terms. -->
+                <ul>
+                    <li><strong>HTTP/0.9:</strong> The initial, simple version supporting only the GET method.</li>
+                    <li><strong>HTTP/1.1:</strong> Introduced persistent connections to reduce TCP overhead.</li>
+                    <li><strong>HTTP/2:</strong> Introduced multiplexing to solve Head-of-Line (HOL) blocking.</li>
+                    <li><strong>HTTP/3:</strong> Uses the QUIC protocol over UDP for faster, more resilient connections.</li>
+                    <li><strong>QUIC:</strong> A transport layer protocol designed to reduce latency compared to TCP.</li>
+                    <li><strong>Multiplexing:</strong> The process of sending multiple requests and responses concurrently over a single connection.</li>
+                    <li><strong>Client-Server Model:</strong> The fundamental interaction paradigm where the client initiates the request.</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>Table of Contents</h3>
+                <!-- Code Comment: Using an ordered list for the table of contents, linking to the main pages. -->
+                <ol>
+                    <li><a href="http1.html">HTTP/1.x: Simplicity & The Flaw (0.9, 1.0, 1.1)</a></li>
+                    <li><a href="http2-3.html">HTTP/2 & HTTP/3: Performance Advancements (Multiplexing & QUIC)</a></li>
+                    <li><a href="concepts.html">Key Protocol Concepts</a></li>
+                    <li><a href="references.html">References & Resources</a></li>
+                    <li><a href="about.html">About This Project</a></li>
+                </ol>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p id="footer-note">This is a class project for IT 3203. <a href="https://ksuweb.github.io/IT3203/" target="_blank">Class Website</a></p>
+    </footer>
+
+</body>
+</html>

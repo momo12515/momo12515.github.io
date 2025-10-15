@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP/1.x: Simplicity & The Flaw</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <h1>The Hypertext Transfer Protocol: A Comprehensive Analysis</h1>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="http1.html">HTTP/1.x: Simplicity & The Flaw</a></li>
+                <li><a href="http2-3.html">HTTP/2 & HTTP/3: Performance</a></li>
+                <li><a href="concepts.html">Key Concepts</a></li>
+                <li><a href="references.html">References & Resources</a></li>
+                <li><a href="about.html">About This Project</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <h2>HTTP/1.x: Simplicity & The Critical Flaw</h2>
+            
+            <p>The development of HTTP was proposed by Sir Tim Berners-Lee at CERN in 1989. The original HTTP, along with HTML and the first web server, was a foundational component of his "global hypertext project."</p>
+
+            <div class="content-card">
+                <h3>HTTP/0.9: The Rudimentary Origin</h3>
+                <p>The protocol's first adaptation, HTTP/0.9, was abnormally transparent, supporting only a single method (GET) and revolving only plain HTML documents. This directness was a premeditated architectural decision that enabled rapid adoption. The original web was conceived as a distributed, read-only document system, akin to a decentralized file system.</p>
+                <p>This model contradicts strongly with the complex, interactive applications of today. The protocol's consecutive transformation, with the extension of methods like POST, PUT, and DELETE, characterized a indispensable shift away from a read-only document store-house regarding a synergetic and two-way structure.</p>
+            </div>
+
+            <div class="content-card">
+                <h3>HTTP/1.0: Formalization and Extensibility</h3>
+                <p>The duration between 1991 and 1995 saw advancement, prompting the need for a formal standard. In May 1996, the first widely universal version, HTTP/1.0, was formalized as RFC 1945. This version introduced several crucial features:</p>
+                <!-- Code Comment: Demonstrating the use of an unordered list to highlight key features -->
+                <ul>
+                    <li>Versioning information within requests.</li>
+                    <li>A status code line in responses.</li>
+                    <li>The concept of extensible HTTP headers.</li>
+                    <li>The ability to transfer documents other than plain HTML files.</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>The Critical Performance Flaw and HTTP/1.1</h3>
+                <p>Regardless of these enhancements, HTTP/1.0 suffered from a critical performance flaw: it was highly inefficient in its use of TCP connections. For every single capability request, a new TCP network had to be well-established and then sealed. This constructed considerable suspension and overhead, particularly as web pages became more complex and began to enclose various images, scripts, and stylesheets.</p>
+                
+                <p>This obstacle became the fundamental driver for the development of **HTTP/1.1**. HTTP/1.1 introduced the **persistent connection** approach. By keeping the TCP connection open for multiple requests, it significantly reduced the overhead associated with connection setup and teardown, marking a monumental performance improvement.</p>
+                
+                <img src="https://placehold.co/600x250/007bff/ffffff?text=HTTP/1.0+vs+HTTP/1.1+Connection+Model" alt="Diagram illustrating the difference between HTTP 1.0 (new connection for every request) and HTTP 1.1 (persistent connection)." />
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p id="footer-note">This is a class project for IT 3203. <a href="https://ksuweb.github.io/IT3203/" target="_blank">Class Website</a></p>
+    </footer>
+
+</body>
+</html>
