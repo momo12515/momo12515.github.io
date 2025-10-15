@@ -1,0 +1,187 @@
+/* --- IT 3203 Project: HTTP Evolution - Milestone #1 Stylesheet --- */
+
+/* * Selector Type 1: Type Selector (Targets all instances of an element)
+ * Sets basic box model, font, and background for the entire document.
+ */
+body {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    color: #333;
+    background-color: #f4f7f9; /* Light blue-grey background */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex; /* Flexbox for full-page structure (header, main, footer) */
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    color: #007bff; /* Professional blue for headings */
+}
+
+/* * Selector Type 2: ID Selector (Targets a unique element, in this case, the main header)
+ */
+#main-header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #0056b3;
+}
+
+#main-header h1 {
+    color: white;
+    margin: 0;
+    font-size: 2.2em;
+}
+
+/* * Selector Type 3: Class Selector (Targets elements sharing a specific class)
+ */
+.container {
+    display: flex; /* Flexbox for main layout (Sidebar + Content) */
+    flex: 1; /* Allows container to grow and fill available space */
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 0;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; /* Contains floats and rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    background-color: #e9ecef; /* Light grey for sidebar */
+    padding: 20px 0;
+    width: 250px;
+    flex-shrink: 0; /* Prevents sidebar from shrinking too much */
+    border-right: 1px solid #ddd;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border-left: 5px solid transparent; /* Placeholder for active/hover */
+    transition: background-color 0.3s, border-left 0.3s;
+}
+
+/* Hover Effect on Links */
+.nav-menu li a:hover {
+    background-color: #d1d8df; /* Darker background on hover */
+    color: #007bff;
+    border-left: 5px solid #007bff; /* Accent border on hover */
+}
+
+.content {
+    padding: 40px;
+    flex-grow: 1; /* Allows content to take up remaining space */
+}
+
+.content h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.content-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+/* Image Styling */
+.content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 3px solid #007bff;
+    border-radius: 4px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #343a40; /* Dark grey footer */
+    color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+#footer-note a {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+#footer-note a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Media Query for basic responsiveness - Stacks sidebar on small screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-menu li a {
+        padding: 8px 15px;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+    
+    .nav-menu li a:hover {
+        border-left: none;
+        border-bottom: 3px solid #007bff;
+    }
+    
+    .content {
+        padding: 20px;
+    }
+}
